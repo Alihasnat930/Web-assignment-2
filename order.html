@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Page</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <a href="#maincontent" class="skip-link">Skip to main content</a>
+    <header>
+        <h1>A.Bakers</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="registration.html">Register</a></li>
+            <li><a href="order.html" class="active">Order</a></li>
+            <li><a href="features.html">Features</a></li>
+        </ul>
+    </nav>
+    <main id="maincontent">
+        <section>
+            <h2>Place Your Order</h2>
+            <form action="http://mercury.swin.edu.au/it000000/cos10005/regtest.php" method="POST">
+                <fieldset>
+                    <legend>Delivery or Pick-up</legend>
+                    <label for="delivery">
+                        <input type="radio" id="delivery" name="delivery" value="delivery"> Delivery
+                    </label>
+                    <label for="pickup">
+                        <input type="radio" id="pickup" name="delivery" value="pickup"> Pick-up
+                    </label>
+                </fieldset><br>
+
+                <label for="delivery-address">Delivery Address:</label>
+                <input type="text" id="delivery-address" name="delivery-address"><br>
+
+                <label for="billing-address">Billing Address:</label>
+                <input type="text" id="billing-address" name="billing-address">
+                <label for="same-as-delivery">
+                    <input type="checkbox" id="same-as-delivery" name="same-as-delivery"> Same as delivery address
+                </label><br>
+
+                <label for="contact-number">Contact Number:</label>
+                <input type="text" id="contact-number" name="contact-number" required><br>
+
+                <label for="email">Email for Receipt:</label>
+                <input type="email" id="email" name="email" required><br>
+
+                <fieldset>
+                    <legend>Payment Method</legend>
+                    <label for="pay-on-pickup">
+                        <input type="radio" id="pay-on-pickup" name="payment" value="pickup"> Pay on Pick-up
+                    </label>
+                    <label for="pay-online">
+                        <input type="radio" id="pay-online" name="payment" value="online"> Pay Online
+                    </label>
+                </fieldset><br>
+
+                <fieldset>
+                    <legend>Credit Card Information</legend>
+                    <label for="credit-card-type">Credit Card Type:</label>
+                    <select id="credit-card-type" name="credit-card-type">
+                        <option value="visa">Visa</option>
+                        <option value="mastercard">Mastercard</option>
+                        <option value="amex">American Express</option>
+                    </select><br>
+
+                    <label for="credit-card-number">Credit Card Number:</label>
+                    <input type="text" id="credit-card-number" name="credit-card-number"><br>
+                </fieldset>
+
+                <input type="submit" value="Place Order">
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 A.Bakers</p>
+    </footer>
+</body>
+</html>
